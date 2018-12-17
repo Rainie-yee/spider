@@ -32,21 +32,26 @@ public class App {
 			ArrayList<Film> list = new ArrayList<>();
 			for(Element e :es) {
 				Film f =new Film();
-				// 每一部影片
-				Element t = e.select(".title").first();   //.代表class,#代表id
-				//每一部影片的名字
-				String num = e.select(".star span").last().text();   //取某个范围内的最后一个标签
-				String c = e.select(".quote span").text();
-				System.out.println(t.text() + "," + num + "\n" + c);
+				// 每一部影片   select+类元素id
+				f.id = Integer.parseInt(e.select(".pic em").first().text());   //转换为整型
+				f.poster = e.select("img").first().attr("src");
+				f.info = e.select(".bd p").first().text();
+				f.title = e.select(".title").first().text();
+				f.rating = Double.parseDouble( e.select(".rating_num").first().text());  //转换为双精度型
+				String num = e.select(".star span").last().text();
+				f.num = Integer.parseInt(num.substring(0, num.length()-3));
+				f.quote = e.select(".quote span").first().text();
 				
-//				f.title
-//				f.info
-//				f.rating
-//				f.num
-//				f.id
-//				f.poster
-//				f.quote
-//				list.add(f)
+				System.out.println(f);
+				list.add(f);
+//				Element t = e.select(".title").first();   //.代表class,#代表id
+//				//每一部影片的名字
+//				String num = e.select(".star span").last().text();   //取某个范围内的最后一个标签
+//				String c = e.select(".quote span").text();
+//				System.out.println(t.text() + "," + num + "\n" + c);
+				
+			
+
 			}
 			
 //			String title = doc.title();
