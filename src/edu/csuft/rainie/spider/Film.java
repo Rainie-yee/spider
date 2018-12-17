@@ -1,6 +1,6 @@
 package edu.csuft.rainie.spider;
 
-public class Film {
+public class Film {           //Ä¬ÈÏ¼Ì³Ğ
 /**
  * Ó°Æ¬Ãû³Æ
  * 
