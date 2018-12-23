@@ -102,10 +102,10 @@ public class Music {
 
 	@Override
 	public String toString() {
-//		return "Music [专辑名：" + title + ", 歌手：" + singer + ", 流派：" + sgenre + ", 专辑类型：" + atype + ", 介质："
-//				+ media + ", 发行时间：" + time + ", 出版者：" + publisher + ", 唱片数:" + num + ", 评分：" + rating
-//				+ ", 评分人数：" + rating_sum + ", 海报：" + poster + "]";
-		return "Music [专辑名：" + title + "," + info + ", 评分：" + rating
-		+ ", 评分人数：" + rating_sum + ", 海报：" + poster + "]";
+		return "Music [专辑名：" + title + ", 歌手：" + singer + ", 流派：" + sgenre + ", 专辑类型：" + atype + ", 介质："
+				+ media + ", 发行时间：" + time + ", 出版者：" + publisher + ", 唱片数:" + num + ", 评分：" + rating
+				+ ", 评分人数：" + rating_sum + ", 海报：" + poster + "]";
+//		return "Music [专辑名：" + title + "," + info + ", 评分：" + rating
+//		+ ", 评分人数：" + rating_sum + ", 海报：" + poster + "]";
 	}
 }  

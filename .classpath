@@ -2,6 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/我的下载插件/jsoup/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="D:/我的下载插件/jsoup/jsoup-1.11.3.jar" sourcepath="D:/我的下载插件/jsoup/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="D:/我的下载插件/mysql/新建文件夹/mybatis-3.4.6/mybatis-3.4.6/mybatis-3.4.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

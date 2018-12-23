@@ -53,18 +53,19 @@ public class Spider implements Runnable{
 			//从文档（树）查找节点
 			Elements es = doc.select(".grid_view .item"); 
 			for(Element e :es) {
-			Film f =new Film();
+			Film f = new Film();
 			// 每一部影片   select+类元素id
-			f.id = Integer.parseInt(e.select(".pic em").first().text());   //转换为整型
+			f.id = Integer.parseInt(e.select(".pic em").text());   //转换为整型
 			f.poster = e.select("img").first().attr("src");
-			f.info = e.select(".bd p").first().text();
+			f.info = e.select(".info").first().text();
 			f.title = e.select(".title").first().text();
-			f.rating = Double.parseDouble( e.select(".rating_num").first().text());  //转换为双精度型
+			f.rating = Double.parseDouble( e.select(".rating_num").text());  //转换为双精度型
 			String num = e.select(".star span").last().text();
 			f.num = Integer.parseInt(num.substring(0, num.length()-3));
-			f.quote = e.select(".quote span").first().text();
+			f.quote = e.select(".quote span").text();
+			f.url = e.select(".pic a").first().attr("href");
 			
-			System.out.println(name + ":" + f);
+//			System.out.println(name + ":" + f);
 			list.add(f);
 		}
 			

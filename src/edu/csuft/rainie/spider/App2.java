@@ -30,17 +30,17 @@ public class App2 {
 			for(Element e :es) {
 				Music m = new Music();
 				m.title = e.select("h1 span").first().text();
-//				m.singer = e.select(".ckd-collect span a").first().text();
-//			    m.sgenre = e.select(".ckd-collect span").first().text();
+				m.singer = e.select(".ckd-collect span a").first().text();
+			    m.sgenre = e.select(".ckd-collect span").get(0).select(".pl").text();
 //				m.atype = e.select("").text();
 //			    m.media
 //			    m.time
 //			    m.publisher
 //			    m.num = e.select(".ckd-collect").last().text();
-				m.info =  e.select(".ckd-collect").last().text();
-			    m.rating = Double.parseDouble(e.select("#interest_sectl strong").first().text());
-			    m.rating_sum = Integer.parseInt(e.select(".rating_people span").text());
-				m.poster = e.select(".nbg img").attr("src");
+//				m.info =  e.select(".ckd-collect").last().text();
+//			    m.rating = Double.parseDouble(e.select("#interest_sectl strong").first().text());
+//			    m.rating_sum = Integer.parseInt(e.select(".rating_people span").text());
+//				m.poster = e.select(".nbg img").attr("src");
 			    System.out.println(m);
 			    list.add(m);
 			}
